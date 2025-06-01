@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Medical Assistant - Nurse Interface</title>
+    <!-- Marked.js for markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            max-width: 800px;
+            width: 90%;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .header h1 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        .patient-info {
+            background: #f8f9ff;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid #667eea;
+        }
+        
+        .patient-info h3 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        
+        .microphone-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .mic-button {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            border: none;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            font-size: 3rem;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+        }
+        
+        .mic-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.4);
+        }
+        
+        .mic-button.recording {
+            background: linear-gradient(45deg, #ff4757, #ff3838);
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .status {
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .status.idle {
+            background: #e8f5e8;
+            color: #2d5a2d;
+            border: 2px solid #a8e6cf;
+        }
+        
+        .status.recording {
+            background: #fff3cd;
+            color: #856404;
+            border: 2px solid #ffeaa7;
+        }
+        
+        .status.processing {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 2px solid #74b9ff;
+        }
+        
+        .transcription {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            min-height: 150px;
+            border: 2px solid #e9ecef;
+        }
+        
+        .transcription h4 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        
+        .transcription-text {
+            color: #555;
+            line-height: 1.6;
+            font-size: 1rem;
+            white-space: pre-wrap; /* Preserve line breaks */
+        }
+        
+        .summary {
+            background: #e8f5e8;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border: 2px solid #a8e6cf;
+        }
+        
+        .summary h4 {
+            color: #2d5a2d;
+            margin-bottom: 1rem;
+        }
+        
+        .summary-content {
+            color: #2d5a2d;
+            line-height: 1.6;
+        }
+        
+        /* Markdown styling for summary content */
+        .summary-content h1, .summary-content h2, .summary-content h3 {
+            color: #2d5a2d;
+            margin: 1rem 0 0.5rem 0;
+        }
+        
+        .summary-content p {
+            margin: 0.5rem 0;
+        }
+        
+        .summary-content ul, .summary-content ol {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+        }
+        
+        .summary-content li {
+            margin: 0.25rem 0;
+        }
+        
+        .summary-content strong {
+            font-weight: 600;
+        }
+        
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #5a6fd8;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏥 AI Medical Assistant</h1>
+            <p>Nurse-Patient Interaction Interface</p>
+        </div>
+        
+        <div class="patient-info">
+            <h3>📋 Current Patient: Sarah Michelle Johnson</h3>
+            <p><strong>Age:</strong> 46 | <strong>Visit:</strong> Follow-up for diabetes and hypertension</p>
+            <p><strong>Chief Complaint:</strong> Chest discomfort and shortness of breath when walking up stairs</p>
+        </div>
+        
+        <div class="microphone-section">
+            <button id="micButton" class="mic-button" onclick="toggleRecording()">
+                🎤
+            </button>
+            <div id="status" class="status idle">Click microphone to start recording</div>
+        </div>
+        
+        <div class="transcription">
+            <h4>📝 Live Transcription</h4>
+            <div id="transcriptionText" class="transcription-text">
+                Transcription will appear here as you speak...
+            </div>
+        </div>
+        
+        <div id="summarySection" class="summary" style="display: none;">
+            <h4>🔍 AI Summary</h4>
+            <div id="summaryContent" class="summary-content">
+                AI-generated summary will appear here...
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button class="btn btn-primary" onclick="continueToDoctor()" id="continueButton">Continue to doctor session</button>
+        </div>
+    </div>
+
+    <script>
+        let isRecording = false;
+        let mediaRecorder;
+        let audioChunks = [];
+        let fullTranscription = "";
+        
+        const micButton = document.getElementById('micButton');
+        const status = document.getElementById('status');
+        const transcriptionText = document.getElementById('transcriptionText');
+        const summarySection = document.getElementById('summarySection');
+        const summaryContent = document.getElementById('summaryContent');
+        
+        async function toggleRecording() {
+            if (!isRecording) {
+                startRecording();
+            } else {
+                stopRecording();
+            }
+        }
+        
+        async function startRecording() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                mediaRecorder = new MediaRecorder(stream);
+                audioChunks = [];
+                
+                mediaRecorder.ondataavailable = event => {
+                    audioChunks.push(event.data);
+                };
+                
+                mediaRecorder.onstop = async () => {
+                    const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+                    await transcribeAudio(audioBlob);
+                };
+                
+                mediaRecorder.start();
+                isRecording = true;
+                
+                micButton.classList.add('recording');
+                micButton.textContent = '🔴';
+                status.className = 'status recording';
+                status.textContent = 'Recording... Click to stop';
+                
+            } catch (error) {
+                console.error('Error starting recording:', error);
+                status.className = 'status idle';
+                status.textContent = 'Error: Could not access microphone. Try using localhost or HTTPS.';
+            }
+        }
+        
+        function stopRecording() {
+            if (mediaRecorder && mediaRecorder.state === 'recording') {
+                mediaRecorder.stop();
+                mediaRecorder.stream.getTracks().forEach(track => track.stop());
+            }
+            
+            isRecording = false;
+            micButton.classList.remove('recording');
+            micButton.textContent = '🎤';
+            status.className = 'status processing';
+            status.textContent = 'Processing audio...';
+        }
+        
+        async function transcribeAudio(audioBlob) {
+            try {
+                const formData = new FormData();
+                formData.append('audio', audioBlob, 'recording.wav');
+                
+                const response = await fetch('/transcribe', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    const newText = result.transcription;
+                    fullTranscription += (fullTranscription ? ' ' : '') + newText;
+                    transcriptionText.textContent = fullTranscription;
+                    
+                    status.className = 'status idle';
+                    status.textContent = 'Click microphone to continue recording';
+                } else {
+                    throw new Error(result.error || 'Transcription failed');
+                }
+                
+            } catch (error) {
+                console.error('Error transcribing audio:', error);
+                status.className = 'status idle';
+                status.textContent = 'Error processing audio. Try again.';
+            }
+        }
+        
+        async function generateSummary() {
+            if (!fullTranscription.trim()) {
+                alert('No transcription available to summarize');
+                return;
+            }
+            
+            try {
+                status.className = 'status processing';
+                status.textContent = 'Generating AI summary...';
+                
+                const response = await fetch('/summarize', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ transcription: fullTranscription })
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    // Use marked.js to render markdown content
+                    const markdownHtml = marked.parse(result.summary);
+                    summaryContent.innerHTML = markdownHtml;
+                    summarySection.style.display = 'block';
+                    
+                    status.className = 'status idle';
+                    status.textContent = 'Summary generated successfully';
+                } else {
+                    throw new Error(result.error || 'Summary generation failed');
+                }
+                
+            } catch (error) {
+                console.error('Error generating summary:', error);
+                status.className = 'status idle';
+                status.textContent = 'Error generating summary. Try again.';
+            }
+        }
+        
+        async function saveSummary() {
+            if (!summaryContent.innerHTML || summaryContent.innerHTML === 'AI-generated summary will appear here...') {
+                alert('No summary available to save');
+                return;
+            }
+            
+            try {
+                const response = await fetch('/save-summary', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ 
+                        transcription: fullTranscription,
+                        summary: summaryContent.textContent || summaryContent.innerText,
+                        timestamp: new Date().toISOString()
+                    })
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    status.className = 'status idle';
+                    status.textContent = 'Summary saved to medical record. Redirecting to doctor review...';
+                    
+                    // Show success message briefly then redirect
+                    setTimeout(() => {
+                        window.location.href = result.redirect_url || '/doctor-review';
+                    }, 2000);
+                } else {
+                    throw new Error(result.error || 'Save failed');
+                }
+                
+            } catch (error) {
+                console.error('Error saving summary:', error);
+                status.className = 'status idle';
+                status.textContent = 'Error saving summary. Try again.';
+            }
+        }
+        
+        function clearSession() {
+            fullTranscription = "";
+            transcriptionText.textContent = "Transcription will appear here as you speak...";
+            summarySection.style.display = 'none';
+            summaryContent.innerHTML = "AI-generated summary will appear here...";
+            status.className = 'status idle';
+            status.textContent = 'Session cleared. Click microphone to start recording';
+        }
+        
+        async function continueToDoctor() {
+            if (!fullTranscription.trim()) {
+                alert('No transcription available to continue to doctor session');
+                return;
+            }
+            
+            try {
+                // First generate summary if not already generated
+                if (!summaryContent.innerHTML || summaryContent.innerHTML === 'AI-generated summary will appear here...') {
+                    status.className = 'status processing';
+                    status.textContent = 'Generating AI summary...';
+                    
+                    const summaryResponse = await fetch('/summarize', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ transcription: fullTranscription })
+                    });
+                    
+                    const summaryResult = await summaryResponse.json();
+                    
+                    if (summaryResult.success) {
+                        // Use marked.js to render markdown content
+                        const markdownHtml = marked.parse(summaryResult.summary);
+                        summaryContent.innerHTML = markdownHtml;
+                        summarySection.style.display = 'block';
+                    } else {
+                        throw new Error(summaryResult.error || 'Summary generation failed');
+                    }
+                }
+                
+                // Now save the summary
+                status.className = 'status processing';
+                status.textContent = 'Saving summary and redirecting to doctor session...';
+                
+                const saveResponse = await fetch('/save-summary', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ 
+                        transcription: fullTranscription,
+                        summary: summaryContent.textContent || summaryContent.innerText,
+                        timestamp: new Date().toISOString()
+                    })
+                });
+                
+                const saveResult = await saveResponse.json();
+                
+                if (saveResult.success) {
+                    status.className = 'status idle';
+                    status.textContent = 'Summary saved successfully. Redirecting to doctor session...';
+                    
+                    // Redirect after brief delay
+                    setTimeout(() => {
+                        window.location.href = saveResult.redirect_url || '/doctor-review';
+                    }, 1500);
+                } else {
+                    throw new Error(saveResult.error || 'Save failed');
+                }
+                
+            } catch (error) {
+                console.error('Error continuing to doctor session:', error);
+                status.className = 'status idle';
+                status.textContent = 'Error continuing to doctor session. Try again.';
+            }
+        }
+    </script>
+</body>
+</html> 

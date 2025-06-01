@@ -1,0 +1,29 @@
+# AI Medical Assistant - Requirements
+# Backend Framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+jinja2==3.1.2
+
+# AI and ML
+openai==1.3.6
+sentence-transformers>=2.2.2
+numpy>=1.21.0
+scikit-learn==1.3.2
+torch>=1.9.0
+transformers>=4.21.0
+
+# WebSocket support (included with FastAPI)
+websockets==12.0
+
+# Static file serving
+aiofiles==23.2.1
+
+# Data processing
+pandas==2.0.3
+python-multipart==0.0.6
+
+# Development
+python-dotenv==1.0.0
+
+# Audio processing
+ffmpeg-python==0.2.0 

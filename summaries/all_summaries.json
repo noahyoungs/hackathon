@@ -1,0 +1,30 @@
+[
+  {
+    "timestamp": "2025-06-01T06:36:50.880Z",
+    "transcription": "This is the conversation between the nurse and the patient.",
+    "summary": "\n                AI-generated summary will appear here...\n            ",
+    "session_type": "nurse_interaction",
+    "patient_id": "MR-2024-0347"
+  },
+  {
+    "timestamp": "2025-06-01T06:43:01.830Z",
+    "transcription": "This is the conversation between the nurse and the patient.",
+    "summary": "\n                AI-generated summary will appear here...\n            ",
+    "session_type": "nurse_interaction",
+    "patient_id": "MR-2024-0347"
+  },
+  {
+    "timestamp": "2025-06-01T06:47:38.516Z",
+    "transcription": "Good morning, good morning. May I know your name, please? My name is Tom Holland. Sit down, please. You look pale with a horse voice, Tom. That's right, Doctor. I've got a sore throat for a week, and I also feel a little feverish just this morning. That's why I go to the hospital. OK, I see. First, I'll have your temperature taken.",
+    "summary": "\n                AI-generated summary will appear here...\n            ",
+    "session_type": "nurse_interaction",
+    "patient_id": "MR-2024-0347"
+  },
+  {
+    "timestamp": "2025-06-01T07:06:44.017Z",
+    "transcription": "This is the conversation between the doctor and the nurse.",
+    "summary": "\n                AI-generated summary will appear here...\n            ",
+    "session_type": "nurse_interaction",
+    "patient_id": "MR-2024-0347"
+  }
+]

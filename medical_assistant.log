@@ -1,0 +1,827 @@
+2025-06-01 15:44:26,139 - __main__ - INFO - Loading Whisper model...
+2025-06-01 15:44:26,361 - __main__ - INFO - Whisper model loaded successfully!
+2025-06-01 15:44:26,361 - __main__ - INFO - Setting up OpenAI client...
+2025-06-01 15:44:26,376 - __main__ - INFO - OpenAI client setup complete
+2025-06-01 15:44:26,385 - __main__ - INFO - Starting FastAPI server on localhost:12345
+2025-06-01 15:44:26,811 - __main__ - INFO - Serving doctor review interface
+2025-06-01 15:44:26,831 - __main__ - INFO - Fetching all summaries
+2025-06-01 15:44:26,831 - __main__ - INFO - Successfully loaded 2 summaries
+2025-06-01 15:44:26,832 - __main__ - INFO - Starting summarization request
+2025-06-01 15:44:26,832 - __main__ - INFO - Transcription length: 59 characters
+2025-06-01 15:44:26,832 - __main__ - INFO - Medical record loaded successfully
+2025-06-01 15:44:26,832 - __main__ - INFO - Sending request to OpenAI API...
+2025-06-01 15:44:31,791 - httpx - INFO - HTTP Request: POST https://gateway.ai.cloudflare.com/v1/c1e15f924beb8068d5ab8cf461f69ff8/hackathon/openai/chat/completions "HTTP/1.1 200 OK"
+2025-06-01 15:44:31,795 - __main__ - INFO - OpenAI API request completed successfully
+2025-06-01 15:44:31,795 - __main__ - INFO - Summary generated successfully. Length: 1676 characters
+2025-06-01 15:45:56,808 - __main__ - INFO - Serving nurse interface
+2025-06-01 15:47:30,111 - __main__ - INFO - Starting transcription for audio file: recording.wav
+2025-06-01 15:47:30,111 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpdnagexo0.wav
+2025-06-01 15:47:30,111 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 15:47:30,710 - __main__ - INFO - Transcription completed successfully. Length: 333 characters
+2025-06-01 15:47:30,710 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 15:47:38,518 - __main__ - INFO - Starting save summary request
+2025-06-01 15:47:38,518 - __main__ - INFO - Summaries directory ensured
+2025-06-01 15:47:38,518 - __main__ - INFO - Summary saved to individual file: summaries/summary_20250601_154738.json
+2025-06-01 15:47:38,518 - __main__ - INFO - Summary added to master file: summaries/all_summaries.json
+2025-06-01 15:47:40,036 - __main__ - INFO - Serving doctor review interface
+2025-06-01 15:47:40,054 - __main__ - INFO - Fetching all summaries
+2025-06-01 15:47:40,054 - __main__ - INFO - Successfully loaded 3 summaries
+2025-06-01 15:47:40,055 - __main__ - INFO - Starting summarization request
+2025-06-01 15:47:40,055 - __main__ - INFO - Transcription length: 333 characters
+2025-06-01 15:47:40,055 - __main__ - INFO - Medical record loaded successfully
+2025-06-01 15:47:40,055 - __main__ - INFO - Sending request to OpenAI API...
+2025-06-01 15:47:43,741 - httpx - INFO - HTTP Request: POST https://gateway.ai.cloudflare.com/v1/c1e15f924beb8068d5ab8cf461f69ff8/hackathon/openai/chat/completions "HTTP/1.1 200 OK"
+2025-06-01 15:47:43,741 - __main__ - INFO - OpenAI API request completed successfully
+2025-06-01 15:47:43,741 - __main__ - INFO - Summary generated successfully. Length: 840 characters
+2025-06-01 16:06:31,863 - __main__ - INFO - Loading Whisper model...
+2025-06-01 16:06:32,081 - __main__ - INFO - Whisper model loaded successfully!
+2025-06-01 16:06:32,081 - __main__ - INFO - Setting up OpenAI client...
+2025-06-01 16:06:32,101 - __main__ - INFO - OpenAI client setup complete
+2025-06-01 16:06:32,101 - __main__ - INFO - Loading sentence transformer model and medical record vectors...
+2025-06-01 16:06:32,113 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-06-01 16:06:32,113 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-01 16:06:34,392 - __main__ - INFO - Loaded 16 medical record vectors
+2025-06-01 16:06:34,403 - __main__ - INFO - Starting FastAPI server on localhost:12345
+2025-06-01 16:06:35,996 - __main__ - INFO - Serving nurse interface
+2025-06-01 16:06:42,276 - __main__ - INFO - Starting transcription for audio file: recording.wav
+2025-06-01 16:06:42,276 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpugy0mcph.wav
+2025-06-01 16:06:42,276 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:06:42,604 - __main__ - INFO - Transcription completed successfully. Length: 58 characters
+2025-06-01 16:06:42,604 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:06:44,019 - __main__ - INFO - Starting save summary request
+2025-06-01 16:06:44,019 - __main__ - INFO - Summaries directory ensured
+2025-06-01 16:06:44,020 - __main__ - INFO - Summary saved to individual file: summaries/summary_20250601_160644.json
+2025-06-01 16:06:44,020 - __main__ - INFO - Summary added to master file: summaries/all_summaries.json
+2025-06-01 16:06:45,534 - __main__ - INFO - Serving doctor review interface
+2025-06-01 16:06:45,554 - __main__ - INFO - Fetching all summaries
+2025-06-01 16:06:45,554 - __main__ - INFO - Successfully loaded 4 summaries
+2025-06-01 16:06:45,578 - __main__ - INFO - Starting summarization request
+2025-06-01 16:06:45,578 - __main__ - INFO - Transcription length: 58 characters
+2025-06-01 16:06:45,578 - __main__ - INFO - Medical record loaded successfully
+2025-06-01 16:06:45,578 - __main__ - INFO - Sending request to OpenAI API...
+2025-06-01 16:06:51,097 - httpx - INFO - HTTP Request: POST https://gateway.ai.cloudflare.com/v1/c1e15f924beb8068d5ab8cf461f69ff8/hackathon/openai/chat/completions "HTTP/1.1 200 OK"
+2025-06-01 16:06:51,102 - __main__ - INFO - OpenAI API request completed successfully
+2025-06-01 16:06:51,102 - __main__ - INFO - Summary generated successfully. Length: 1118 characters
+2025-06-01 16:06:53,045 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:06:53,046 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpd3hgvlkv.wav
+2025-06-01 16:06:53,046 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:06:53,169 - __main__ - INFO - Transcription completed successfully. Length: 6 characters
+2025-06-01 16:06:53,169 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:06:56,149 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:06:56,150 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmp6h7dkv5g.wav
+2025-06-01 16:06:56,150 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:06:56,280 - __main__ - INFO - Transcription completed successfully. Length: 20 characters
+2025-06-01 16:06:56,280 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:06:59,257 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:06:59,258 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpzhvil5ii.wav
+2025-06-01 16:06:59,258 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:06:59,419 - __main__ - INFO - Transcription completed successfully. Length: 44 characters
+2025-06-01 16:06:59,419 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:07:00,043 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:07:00,044 - __main__ - INFO - Query length: 72 characters
+2025-06-01 16:07:00,948 - __main__ - INFO - Found 5 relevant results
+2025-06-01 16:07:02,365 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:07:02,366 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmp5x5ymmfd.wav
+2025-06-01 16:07:02,366 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:07:02,839 - __main__ - INFO - Transcription completed successfully. Length: 13 characters
+2025-06-01 16:07:02,840 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:07:05,043 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:07:05,043 - __main__ - INFO - Query length: 86 characters
+2025-06-01 16:07:05,109 - __main__ - INFO - Found 5 relevant results
+2025-06-01 16:07:05,465 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:07:05,467 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpje5fdmnw.wav
+2025-06-01 16:07:05,467 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:07:05,607 - __main__ - INFO - Transcription completed successfully. Length: 19 characters
+2025-06-01 16:07:05,607 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:07:08,570 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:07:08,572 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmp9kemfqpw.wav
+2025-06-01 16:07:08,572 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:07:09,133 - __main__ - INFO - Transcription completed successfully. Length: 42 characters
+2025-06-01 16:07:09,134 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:07:10,044 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:07:10,044 - __main__ - INFO - Query length: 149 characters
+2025-06-01 16:07:10,110 - __main__ - INFO - Found 5 relevant results
+2025-06-01 16:07:11,673 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:07:11,675 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmp7ma6sr5s.wav
+2025-06-01 16:07:11,675 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:07:11,824 - __main__ - INFO - Transcription completed successfully. Length: 35 characters
+2025-06-01 16:07:11,824 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:07:14,779 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:07:14,780 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpsa7jwfud.wav
+2025-06-01 16:07:14,780 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:07:14,950 - __main__ - INFO - Transcription completed successfully. Length: 52 characters
+2025-06-01 16:07:14,950 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:07:15,042 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:07:15,042 - __main__ - INFO - Query length: 171 characters
+2025-06-01 16:07:15,100 - __main__ - INFO - Found 5 relevant results
+2025-06-01 16:07:17,884 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:07:17,886 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpnr8slfh2.wav
+2025-06-01 16:07:17,886 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:07:18,028 - __main__ - INFO - Transcription completed successfully. Length: 15 characters
+2025-06-01 16:07:18,028 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:07:20,044 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:07:20,044 - __main__ - INFO - Query length: 160 characters
+2025-06-01 16:07:20,083 - __main__ - INFO - Found 5 relevant results
+2025-06-01 16:07:20,987 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:07:20,988 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpva0ls45r.wav
+2025-06-01 16:07:20,988 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:07:21,116 - __main__ - INFO - Transcription completed successfully. Length: 0 characters
+2025-06-01 16:07:21,117 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:07:24,093 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:07:24,093 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpu3c62kbc.wav
+2025-06-01 16:07:24,093 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:07:24,259 - __main__ - INFO - Transcription completed successfully. Length: 43 characters
+2025-06-01 16:07:24,260 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:07:25,043 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:07:25,043 - __main__ - INFO - Query length: 168 characters
+2025-06-01 16:07:25,106 - __main__ - INFO - Found 5 relevant results
+2025-06-01 16:07:27,197 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:07:27,198 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpjnrr6na9.wav
+2025-06-01 16:07:27,198 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:07:27,358 - __main__ - INFO - Transcription completed successfully. Length: 38 characters
+2025-06-01 16:07:27,358 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:07:30,043 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:07:30,043 - __main__ - INFO - Query length: 158 characters
+2025-06-01 16:07:30,082 - __main__ - INFO - Found 5 relevant results
+2025-06-01 16:07:30,301 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:07:30,302 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpnrq9v9pb.wav
+2025-06-01 16:07:30,302 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:07:30,776 - __main__ - INFO - Transcription completed successfully. Length: 7 characters
+2025-06-01 16:07:30,776 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:07:33,405 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:07:33,405 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmp4qe3fkm8.wav
+2025-06-01 16:07:33,405 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:07:33,542 - __main__ - INFO - Transcription completed successfully. Length: 11 characters
+2025-06-01 16:07:33,542 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:07:35,043 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:07:35,043 - __main__ - INFO - Query length: 149 characters
+2025-06-01 16:07:35,080 - __main__ - INFO - Found 5 relevant results
+2025-06-01 16:07:36,514 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:07:36,515 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpam_ymz_d.wav
+2025-06-01 16:07:36,515 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:07:37,015 - __main__ - INFO - Transcription completed successfully. Length: 9 characters
+2025-06-01 16:07:37,015 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:07:39,613 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:07:39,613 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpmvy_ty6b.wav
+2025-06-01 16:07:39,613 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:07:39,748 - __main__ - INFO - Transcription completed successfully. Length: 0 characters
+2025-06-01 16:07:39,749 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:07:40,044 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:07:40,044 - __main__ - INFO - Query length: 148 characters
+2025-06-01 16:07:40,083 - __main__ - INFO - Found 5 relevant results
+2025-06-01 16:07:42,718 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:07:42,719 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpgoq5ou70.wav
+2025-06-01 16:07:42,720 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:07:42,874 - __main__ - INFO - Transcription completed successfully. Length: 56 characters
+2025-06-01 16:07:42,874 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:07:45,042 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:07:45,043 - __main__ - INFO - Query length: 145 characters
+2025-06-01 16:07:45,107 - __main__ - INFO - Found 3 relevant results
+2025-06-01 16:07:45,824 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:07:45,825 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmplj9rmd9p.wav
+2025-06-01 16:07:45,825 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:07:45,977 - __main__ - INFO - Transcription completed successfully. Length: 30 characters
+2025-06-01 16:07:45,977 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:07:48,928 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:07:48,929 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpnlprpjae.wav
+2025-06-01 16:07:48,930 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:07:49,459 - __main__ - INFO - Transcription completed successfully. Length: 4 characters
+2025-06-01 16:07:49,459 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:07:50,041 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:07:50,041 - __main__ - INFO - Query length: 143 characters
+2025-06-01 16:07:50,110 - __main__ - INFO - Found 2 relevant results
+2025-06-01 16:07:52,031 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:07:52,032 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpg2wqclhq.wav
+2025-06-01 16:07:52,032 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:07:52,585 - __main__ - INFO - Transcription completed successfully. Length: 6 characters
+2025-06-01 16:07:52,586 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:07:55,042 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:07:55,042 - __main__ - INFO - Query length: 145 characters
+2025-06-01 16:07:55,078 - __main__ - INFO - Found 3 relevant results
+2025-06-01 16:07:55,134 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:07:55,134 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmphn_fi6df.wav
+2025-06-01 16:07:55,134 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:07:55,264 - __main__ - INFO - Transcription completed successfully. Length: 0 characters
+2025-06-01 16:07:55,264 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:07:58,242 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:07:58,242 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpwxfl6i8i.wav
+2025-06-01 16:07:58,242 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:07:58,849 - __main__ - INFO - Transcription completed successfully. Length: 18 characters
+2025-06-01 16:07:58,850 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:08:00,043 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:08:00,044 - __main__ - INFO - Query length: 155 characters
+2025-06-01 16:08:00,083 - __main__ - INFO - Found 1 relevant results
+2025-06-01 16:08:01,346 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:08:01,347 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpbluqsm12.wav
+2025-06-01 16:08:01,348 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:08:01,494 - __main__ - INFO - Transcription completed successfully. Length: 30 characters
+2025-06-01 16:08:01,494 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:08:04,449 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:08:04,449 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpr9hahjdw.wav
+2025-06-01 16:08:04,449 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:08:04,596 - __main__ - INFO - Transcription completed successfully. Length: 28 characters
+2025-06-01 16:08:04,596 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:08:05,045 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:08:05,045 - __main__ - INFO - Query length: 171 characters
+2025-06-01 16:08:05,109 - __main__ - INFO - Found 5 relevant results
+2025-06-01 16:08:07,553 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:08:07,555 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmppbd90g9j.wav
+2025-06-01 16:08:07,555 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:08:07,692 - __main__ - INFO - Transcription completed successfully. Length: 16 characters
+2025-06-01 16:08:07,693 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:08:08,589 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:08:08,590 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpbl8_06t2.wav
+2025-06-01 16:08:08,590 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:08:09,067 - __main__ - INFO - Transcription completed successfully. Length: 14 characters
+2025-06-01 16:08:09,067 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:08:33,608 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:08:33,609 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpvg9ebzd8.wav
+2025-06-01 16:08:33,610 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:08:33,768 - __main__ - INFO - Transcription completed successfully. Length: 46 characters
+2025-06-01 16:08:33,768 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:08:35,608 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:08:35,608 - __main__ - INFO - Query length: 46 characters
+2025-06-01 16:08:35,905 - __main__ - INFO - Found 0 relevant results
+2025-06-01 16:08:36,710 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:08:36,711 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmphv23ynrv.wav
+2025-06-01 16:08:36,711 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:08:36,871 - __main__ - INFO - Transcription completed successfully. Length: 51 characters
+2025-06-01 16:08:36,871 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:08:39,816 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:08:39,817 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmp_ni6nx8u.wav
+2025-06-01 16:08:39,817 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:08:39,959 - __main__ - INFO - Transcription completed successfully. Length: 27 characters
+2025-06-01 16:08:39,959 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:08:40,610 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:08:40,610 - __main__ - INFO - Query length: 126 characters
+2025-06-01 16:08:40,646 - __main__ - INFO - Found 0 relevant results
+2025-06-01 16:08:42,921 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:08:42,923 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpmhyvvyv0.wav
+2025-06-01 16:08:42,923 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:08:43,086 - __main__ - INFO - Transcription completed successfully. Length: 49 characters
+2025-06-01 16:08:43,086 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:08:45,608 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:08:45,608 - __main__ - INFO - Query length: 165 characters
+2025-06-01 16:08:45,673 - __main__ - INFO - Found 5 relevant results
+2025-06-01 16:08:46,022 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:08:46,023 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpmxcx7irv.wav
+2025-06-01 16:08:46,023 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:08:46,179 - __main__ - INFO - Transcription completed successfully. Length: 46 characters
+2025-06-01 16:08:46,179 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:08:49,127 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:08:49,128 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpo2fhk7aa.wav
+2025-06-01 16:08:49,128 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:08:49,272 - __main__ - INFO - Transcription completed successfully. Length: 20 characters
+2025-06-01 16:08:49,272 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:08:50,607 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:08:50,607 - __main__ - INFO - Query length: 166 characters
+2025-06-01 16:08:50,669 - __main__ - INFO - Found 5 relevant results
+2025-06-01 16:08:52,229 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:08:52,231 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpby8n4sqo.wav
+2025-06-01 16:08:52,231 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:08:52,379 - __main__ - INFO - Transcription completed successfully. Length: 42 characters
+2025-06-01 16:08:52,380 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:08:55,333 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:08:55,334 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpwe61a9e4.wav
+2025-06-01 16:08:55,334 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:08:55,471 - __main__ - INFO - Transcription completed successfully. Length: 15 characters
+2025-06-01 16:08:55,472 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:08:55,609 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:08:55,609 - __main__ - INFO - Query length: 174 characters
+2025-06-01 16:08:55,642 - __main__ - INFO - Found 5 relevant results
+2025-06-01 16:08:58,438 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:08:58,439 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpzilxgpzk.wav
+2025-06-01 16:08:58,439 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:08:58,591 - __main__ - INFO - Transcription completed successfully. Length: 55 characters
+2025-06-01 16:08:58,591 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:09:00,609 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:09:00,609 - __main__ - INFO - Query length: 166 characters
+2025-06-01 16:09:00,674 - __main__ - INFO - Found 5 relevant results
+2025-06-01 16:09:01,545 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:09:01,546 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmp8rluwlhy.wav
+2025-06-01 16:09:01,546 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:09:01,710 - __main__ - INFO - Transcription completed successfully. Length: 53 characters
+2025-06-01 16:09:01,711 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:09:04,648 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:09:04,648 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpjwebtaen.wav
+2025-06-01 16:09:04,648 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:09:05,263 - __main__ - INFO - Transcription completed successfully. Length: 37 characters
+2025-06-01 16:09:05,263 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:09:05,610 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:09:05,610 - __main__ - INFO - Query length: 154 characters
+2025-06-01 16:09:05,648 - __main__ - INFO - Found 5 relevant results
+2025-06-01 16:09:07,752 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:09:07,753 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpaztg32de.wav
+2025-06-01 16:09:07,753 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:09:07,902 - __main__ - INFO - Transcription completed successfully. Length: 34 characters
+2025-06-01 16:09:07,902 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:09:10,607 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:09:10,607 - __main__ - INFO - Query length: 152 characters
+2025-06-01 16:09:10,669 - __main__ - INFO - Found 5 relevant results
+2025-06-01 16:09:10,853 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:09:10,854 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpg32dqjoa.wav
+2025-06-01 16:09:10,854 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:09:10,999 - __main__ - INFO - Transcription completed successfully. Length: 24 characters
+2025-06-01 16:09:10,999 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:09:13,957 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:09:13,958 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpwt5lshk7.wav
+2025-06-01 16:09:13,958 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:09:14,099 - __main__ - INFO - Transcription completed successfully. Length: 18 characters
+2025-06-01 16:09:14,099 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:09:15,611 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:09:15,611 - __main__ - INFO - Query length: 164 characters
+2025-06-01 16:09:15,647 - __main__ - INFO - Found 5 relevant results
+2025-06-01 16:09:17,058 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:09:17,058 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmp8f3yckjb.wav
+2025-06-01 16:09:17,058 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:09:17,193 - __main__ - INFO - Transcription completed successfully. Length: 12 characters
+2025-06-01 16:09:17,194 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:09:20,164 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:09:20,165 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpf_nzz1qt.wav
+2025-06-01 16:09:20,165 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:09:20,306 - __main__ - INFO - Transcription completed successfully. Length: 0 characters
+2025-06-01 16:09:20,306 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:09:20,610 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:09:20,610 - __main__ - INFO - Query length: 166 characters
+2025-06-01 16:09:20,642 - __main__ - INFO - Found 5 relevant results
+2025-06-01 16:09:23,264 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:09:23,265 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpol9__4xk.wav
+2025-06-01 16:09:23,265 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:09:23,407 - __main__ - INFO - Transcription completed successfully. Length: 10 characters
+2025-06-01 16:09:23,408 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:09:25,607 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:09:25,607 - __main__ - INFO - Query length: 164 characters
+2025-06-01 16:09:25,639 - __main__ - INFO - Found 5 relevant results
+2025-06-01 16:09:26,372 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:09:26,373 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpjh20z3c5.wav
+2025-06-01 16:09:26,373 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:09:26,525 - __main__ - INFO - Transcription completed successfully. Length: 36 characters
+2025-06-01 16:09:26,525 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:09:29,477 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:09:29,478 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmp2javgqp8.wav
+2025-06-01 16:09:29,478 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:09:29,616 - __main__ - INFO - Transcription completed successfully. Length: 13 characters
+2025-06-01 16:09:29,616 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:09:30,609 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:09:30,609 - __main__ - INFO - Query length: 165 characters
+2025-06-01 16:09:30,648 - __main__ - INFO - Found 5 relevant results
+2025-06-01 16:09:32,582 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:09:32,584 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpwqeikjwp.wav
+2025-06-01 16:09:32,584 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:09:32,736 - __main__ - INFO - Transcription completed successfully. Length: 31 characters
+2025-06-01 16:09:32,736 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:09:35,609 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:09:35,610 - __main__ - INFO - Query length: 165 characters
+2025-06-01 16:09:35,647 - __main__ - INFO - Found 5 relevant results
+2025-06-01 16:09:35,682 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:09:35,682 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpuma0gtt9.wav
+2025-06-01 16:09:35,682 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:09:35,827 - __main__ - INFO - Transcription completed successfully. Length: 24 characters
+2025-06-01 16:09:35,827 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:09:38,789 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:09:38,790 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpy9jerpp0.wav
+2025-06-01 16:09:38,790 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:09:38,943 - __main__ - INFO - Transcription completed successfully. Length: 30 characters
+2025-06-01 16:09:38,943 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:09:40,606 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:09:40,607 - __main__ - INFO - Query length: 155 characters
+2025-06-01 16:09:40,643 - __main__ - INFO - Found 5 relevant results
+2025-06-01 16:09:41,893 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:09:41,894 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpn3ka9j0p.wav
+2025-06-01 16:09:41,894 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:09:42,608 - __main__ - INFO - Transcription completed successfully. Length: 58 characters
+2025-06-01 16:09:42,609 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:09:44,992 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:09:44,993 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpfa29650n.wav
+2025-06-01 16:09:44,993 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:09:45,144 - __main__ - INFO - Transcription completed successfully. Length: 32 characters
+2025-06-01 16:09:45,144 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:09:45,607 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:09:45,607 - __main__ - INFO - Query length: 154 characters
+2025-06-01 16:09:45,647 - __main__ - INFO - Found 4 relevant results
+2025-06-01 16:09:48,095 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:09:48,095 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpsr7vdicu.wav
+2025-06-01 16:09:48,095 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:09:48,249 - __main__ - INFO - Transcription completed successfully. Length: 46 characters
+2025-06-01 16:09:48,249 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:09:50,609 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:09:50,609 - __main__ - INFO - Query length: 161 characters
+2025-06-01 16:09:50,647 - __main__ - INFO - Found 0 relevant results
+2025-06-01 16:09:51,202 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:09:51,202 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpuob31gt9.wav
+2025-06-01 16:09:51,202 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:09:51,379 - __main__ - INFO - Transcription completed successfully. Length: 63 characters
+2025-06-01 16:09:51,380 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:09:54,309 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:09:54,310 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmps90thdsy.wav
+2025-06-01 16:09:54,310 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:09:54,465 - __main__ - INFO - Transcription completed successfully. Length: 39 characters
+2025-06-01 16:09:54,466 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:09:55,608 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:09:55,609 - __main__ - INFO - Query length: 155 characters
+2025-06-01 16:09:55,645 - __main__ - INFO - Found 0 relevant results
+2025-06-01 16:09:57,413 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:09:57,414 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpw429cpze.wav
+2025-06-01 16:09:57,414 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:09:57,544 - __main__ - INFO - Transcription completed successfully. Length: 2 characters
+2025-06-01 16:09:57,545 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:10:00,516 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:10:00,518 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmp_200w488.wav
+2025-06-01 16:10:00,518 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:10:00,662 - __main__ - INFO - Transcription completed successfully. Length: 37 characters
+2025-06-01 16:10:00,663 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:10:00,664 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:10:00,664 - __main__ - INFO - Query length: 153 characters
+2025-06-01 16:10:00,694 - __main__ - INFO - Found 0 relevant results
+2025-06-01 16:10:03,619 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:10:03,620 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpqwbxv6te.wav
+2025-06-01 16:10:03,620 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:10:03,773 - __main__ - INFO - Transcription completed successfully. Length: 58 characters
+2025-06-01 16:10:03,773 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:10:05,607 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:10:05,607 - __main__ - INFO - Query length: 158 characters
+2025-06-01 16:10:05,638 - __main__ - INFO - Found 0 relevant results
+2025-06-01 16:10:06,724 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:10:06,725 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpfaz4wacn.wav
+2025-06-01 16:10:06,725 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:10:06,887 - __main__ - INFO - Transcription completed successfully. Length: 56 characters
+2025-06-01 16:10:06,887 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:10:09,830 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:10:09,831 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpw8iukkdx.wav
+2025-06-01 16:10:09,831 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:10:09,977 - __main__ - INFO - Transcription completed successfully. Length: 39 characters
+2025-06-01 16:10:09,977 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:10:10,609 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:10:10,610 - __main__ - INFO - Query length: 155 characters
+2025-06-01 16:10:10,674 - __main__ - INFO - Found 0 relevant results
+2025-06-01 16:10:12,933 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:10:12,934 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpfs_3yoz3.wav
+2025-06-01 16:10:12,934 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:10:13,071 - __main__ - INFO - Transcription completed successfully. Length: 21 characters
+2025-06-01 16:10:13,071 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:10:15,609 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:10:15,610 - __main__ - INFO - Query length: 147 characters
+2025-06-01 16:10:15,647 - __main__ - INFO - Found 0 relevant results
+2025-06-01 16:10:16,037 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:10:16,038 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpxtu0czrb.wav
+2025-06-01 16:10:16,038 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:10:16,211 - __main__ - INFO - Transcription completed successfully. Length: 71 characters
+2025-06-01 16:10:16,212 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:10:19,143 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:10:19,145 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmp66odoh13.wav
+2025-06-01 16:10:19,145 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:10:19,287 - __main__ - INFO - Transcription completed successfully. Length: 23 characters
+2025-06-01 16:10:19,287 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:10:20,608 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:10:20,608 - __main__ - INFO - Query length: 163 characters
+2025-06-01 16:10:20,646 - __main__ - INFO - Found 5 relevant results
+2025-06-01 16:10:22,249 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:10:22,250 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmppp08v8nt.wav
+2025-06-01 16:10:22,250 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:10:22,415 - __main__ - INFO - Transcription completed successfully. Length: 53 characters
+2025-06-01 16:10:22,416 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:10:25,354 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:10:25,355 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmphbimzhxk.wav
+2025-06-01 16:10:25,355 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:10:25,487 - __main__ - INFO - Transcription completed successfully. Length: 2 characters
+2025-06-01 16:10:25,487 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:10:25,606 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:10:25,606 - __main__ - INFO - Query length: 161 characters
+2025-06-01 16:10:25,639 - __main__ - INFO - Found 4 relevant results
+2025-06-01 16:10:28,462 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:10:28,463 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpubvdpp_e.wav
+2025-06-01 16:10:28,463 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:10:28,615 - __main__ - INFO - Transcription completed successfully. Length: 37 characters
+2025-06-01 16:10:28,619 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:10:30,606 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:10:30,606 - __main__ - INFO - Query length: 152 characters
+2025-06-01 16:10:30,638 - __main__ - INFO - Found 4 relevant results
+2025-06-01 16:10:31,564 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:10:31,565 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpplgoddgf.wav
+2025-06-01 16:10:31,565 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:10:32,111 - __main__ - INFO - Transcription completed successfully. Length: 32 characters
+2025-06-01 16:10:32,111 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:10:34,667 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:10:34,668 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpdwfsx_by.wav
+2025-06-01 16:10:34,668 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:10:34,836 - __main__ - INFO - Transcription completed successfully. Length: 31 characters
+2025-06-01 16:10:34,837 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:10:35,606 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:10:35,606 - __main__ - INFO - Query length: 138 characters
+2025-06-01 16:10:35,640 - __main__ - INFO - Found 1 relevant results
+2025-06-01 16:10:37,771 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:10:37,772 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpe3l248sg.wav
+2025-06-01 16:10:37,772 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:10:38,431 - __main__ - INFO - Transcription completed successfully. Length: 27 characters
+2025-06-01 16:10:38,431 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:10:40,609 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:10:40,609 - __main__ - INFO - Query length: 143 characters
+2025-06-01 16:10:40,651 - __main__ - INFO - Found 5 relevant results
+2025-06-01 16:10:40,876 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:10:40,877 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmp4q9tlo53.wav
+2025-06-01 16:10:40,877 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:10:41,009 - __main__ - INFO - Transcription completed successfully. Length: 0 characters
+2025-06-01 16:10:41,009 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:10:43,983 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:10:43,984 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpjvwtawwz.wav
+2025-06-01 16:10:43,984 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:10:44,712 - __main__ - INFO - Transcription completed successfully. Length: 58 characters
+2025-06-01 16:10:44,712 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:10:45,611 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:10:45,611 - __main__ - INFO - Query length: 151 characters
+2025-06-01 16:10:45,675 - __main__ - INFO - Found 5 relevant results
+2025-06-01 16:10:47,089 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:10:47,089 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpq3at_0z8.wav
+2025-06-01 16:10:47,089 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:10:47,220 - __main__ - INFO - Transcription completed successfully. Length: 7 characters
+2025-06-01 16:10:47,220 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:10:50,193 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:10:50,194 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmprn5wivso.wav
+2025-06-01 16:10:50,194 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:10:50,809 - __main__ - INFO - Transcription completed successfully. Length: 6 characters
+2025-06-01 16:10:50,809 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:10:50,810 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:10:50,810 - __main__ - INFO - Query length: 144 characters
+2025-06-01 16:10:50,843 - __main__ - INFO - Found 5 relevant results
+2025-06-01 16:10:53,296 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:10:53,297 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpaer9yh6v.wav
+2025-06-01 16:10:53,297 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:10:53,437 - __main__ - INFO - Transcription completed successfully. Length: 0 characters
+2025-06-01 16:10:53,437 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:10:55,610 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:10:55,611 - __main__ - INFO - Query length: 146 characters
+2025-06-01 16:10:55,646 - __main__ - INFO - Found 5 relevant results
+2025-06-01 16:10:56,401 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:10:56,402 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpxbh2r3hx.wav
+2025-06-01 16:10:56,402 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:10:56,540 - __main__ - INFO - Transcription completed successfully. Length: 0 characters
+2025-06-01 16:10:56,541 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:10:59,503 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:10:59,504 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmp6p1rer6e.wav
+2025-06-01 16:10:59,504 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:10:59,651 - __main__ - INFO - Transcription completed successfully. Length: 31 characters
+2025-06-01 16:10:59,651 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:11:00,611 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:11:00,611 - __main__ - INFO - Query length: 152 characters
+2025-06-01 16:11:00,646 - __main__ - INFO - Found 5 relevant results
+2025-06-01 16:11:02,607 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:11:02,607 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpc91ykzxv.wav
+2025-06-01 16:11:02,607 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:11:02,752 - __main__ - INFO - Transcription completed successfully. Length: 21 characters
+2025-06-01 16:11:02,752 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:11:05,608 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:11:05,608 - __main__ - INFO - Query length: 159 characters
+2025-06-01 16:11:05,641 - __main__ - INFO - Found 5 relevant results
+2025-06-01 16:11:05,713 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:11:05,713 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmp03lj95bp.wav
+2025-06-01 16:11:05,713 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:11:05,892 - __main__ - INFO - Transcription completed successfully. Length: 37 characters
+2025-06-01 16:11:05,892 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:11:08,821 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:11:08,822 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpl38b74qq.wav
+2025-06-01 16:11:08,822 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:11:08,995 - __main__ - INFO - Transcription completed successfully. Length: 58 characters
+2025-06-01 16:11:08,995 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:11:10,610 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:11:10,610 - __main__ - INFO - Query length: 137 characters
+2025-06-01 16:11:10,642 - __main__ - INFO - Found 4 relevant results
+2025-06-01 16:11:11,922 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:11:11,923 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpwubx43pt.wav
+2025-06-01 16:11:11,924 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:11:12,055 - __main__ - INFO - Transcription completed successfully. Length: 4 characters
+2025-06-01 16:11:12,055 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:11:15,029 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:11:15,030 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpw3vmw2ao.wav
+2025-06-01 16:11:15,030 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:11:15,202 - __main__ - INFO - Transcription completed successfully. Length: 60 characters
+2025-06-01 16:11:15,202 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:11:15,606 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:11:15,606 - __main__ - INFO - Query length: 140 characters
+2025-06-01 16:11:15,640 - __main__ - INFO - Found 0 relevant results
+2025-06-01 16:11:18,135 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:11:18,136 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpga1jvz93.wav
+2025-06-01 16:11:18,136 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:11:18,297 - __main__ - INFO - Transcription completed successfully. Length: 55 characters
+2025-06-01 16:11:18,298 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:11:20,611 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:11:20,611 - __main__ - INFO - Query length: 162 characters
+2025-06-01 16:11:20,649 - __main__ - INFO - Found 0 relevant results
+2025-06-01 16:11:21,243 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:11:21,244 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpz2wzrcl1.wav
+2025-06-01 16:11:21,244 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:11:21,407 - __main__ - INFO - Transcription completed successfully. Length: 54 characters
+2025-06-01 16:11:21,408 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:11:24,347 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:11:24,347 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpecpje53r.wav
+2025-06-01 16:11:24,347 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:11:24,500 - __main__ - INFO - Transcription completed successfully. Length: 43 characters
+2025-06-01 16:11:24,500 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:11:25,610 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:11:25,611 - __main__ - INFO - Query length: 168 characters
+2025-06-01 16:11:25,648 - __main__ - INFO - Found 0 relevant results
+2025-06-01 16:11:27,450 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:11:27,450 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpwtpfkp3a.wav
+2025-06-01 16:11:27,450 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:11:27,599 - __main__ - INFO - Transcription completed successfully. Length: 29 characters
+2025-06-01 16:11:27,600 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:11:30,554 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:11:30,556 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmp497ftic1.wav
+2025-06-01 16:11:30,556 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:11:30,701 - __main__ - INFO - Transcription completed successfully. Length: 14 characters
+2025-06-01 16:11:30,701 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:11:30,702 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:11:30,702 - __main__ - INFO - Query length: 171 characters
+2025-06-01 16:11:30,734 - __main__ - INFO - Found 0 relevant results
+2025-06-01 16:11:33,657 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:11:33,658 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpy4ymg1db.wav
+2025-06-01 16:11:33,658 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:11:33,795 - __main__ - INFO - Transcription completed successfully. Length: 0 characters
+2025-06-01 16:11:33,795 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:11:35,610 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:11:35,610 - __main__ - INFO - Query length: 164 characters
+2025-06-01 16:11:35,646 - __main__ - INFO - Found 1 relevant results
+2025-06-01 16:11:36,763 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:11:36,764 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpzjxtn5m6.wav
+2025-06-01 16:11:36,764 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:11:36,907 - __main__ - INFO - Transcription completed successfully. Length: 0 characters
+2025-06-01 16:11:36,907 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:11:39,868 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:11:39,869 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmp0jesmkeg.wav
+2025-06-01 16:11:39,869 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:11:40,603 - __main__ - INFO - Transcription completed successfully. Length: 55 characters
+2025-06-01 16:11:40,603 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:11:40,607 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:11:40,607 - __main__ - INFO - Query length: 164 characters
+2025-06-01 16:11:40,638 - __main__ - INFO - Found 1 relevant results
+2025-06-01 16:11:42,974 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:11:42,975 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpgyxlhsa6.wav
+2025-06-01 16:11:42,975 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:11:43,110 - __main__ - INFO - Transcription completed successfully. Length: 0 characters
+2025-06-01 16:11:43,110 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:11:45,610 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:11:45,610 - __main__ - INFO - Query length: 164 characters
+2025-06-01 16:11:45,643 - __main__ - INFO - Found 0 relevant results
+2025-06-01 16:11:46,077 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:11:46,077 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmp6orvna0c.wav
+2025-06-01 16:11:46,077 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:11:46,234 - __main__ - INFO - Transcription completed successfully. Length: 36 characters
+2025-06-01 16:11:46,234 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:11:49,182 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:11:49,183 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpm0pro4iw.wav
+2025-06-01 16:11:49,183 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:11:49,335 - __main__ - INFO - Transcription completed successfully. Length: 48 characters
+2025-06-01 16:11:49,335 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:11:50,606 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:11:50,606 - __main__ - INFO - Query length: 169 characters
+2025-06-01 16:11:50,643 - __main__ - INFO - Found 1 relevant results
+2025-06-01 16:11:52,288 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:11:52,288 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpfg3asgk0.wav
+2025-06-01 16:11:52,288 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:11:52,865 - __main__ - INFO - Transcription completed successfully. Length: 46 characters
+2025-06-01 16:11:52,865 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:11:55,396 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:11:55,397 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmptbs9j7y1.wav
+2025-06-01 16:11:55,398 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:11:55,864 - __main__ - INFO - Transcription completed successfully. Length: 15 characters
+2025-06-01 16:11:55,865 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:11:55,865 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:11:55,865 - __main__ - INFO - Query length: 166 characters
+2025-06-01 16:11:55,898 - __main__ - INFO - Found 0 relevant results
+2025-06-01 16:11:58,499 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:11:58,500 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpvkbm2n23.wav
+2025-06-01 16:11:58,500 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:11:58,635 - __main__ - INFO - Transcription completed successfully. Length: 14 characters
+2025-06-01 16:11:58,636 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:12:00,606 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:12:00,606 - __main__ - INFO - Query length: 176 characters
+2025-06-01 16:12:00,641 - __main__ - INFO - Found 1 relevant results
+2025-06-01 16:12:01,601 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:12:01,602 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpywn5mxda.wav
+2025-06-01 16:12:01,602 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:12:01,740 - __main__ - INFO - Transcription completed successfully. Length: 0 characters
+2025-06-01 16:12:01,740 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:12:04,709 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:12:04,710 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpnzwpxzom.wav
+2025-06-01 16:12:04,710 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:12:04,856 - __main__ - INFO - Transcription completed successfully. Length: 0 characters
+2025-06-01 16:12:04,856 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:12:05,607 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:12:05,608 - __main__ - INFO - Query length: 176 characters
+2025-06-01 16:12:05,646 - __main__ - INFO - Found 1 relevant results
+2025-06-01 16:12:07,808 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:12:07,808 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpxtstcycd.wav
+2025-06-01 16:12:07,808 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:12:07,941 - __main__ - INFO - Transcription completed successfully. Length: 0 characters
+2025-06-01 16:12:07,941 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:12:10,605 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:12:10,605 - __main__ - INFO - Query length: 176 characters
+2025-06-01 16:12:10,639 - __main__ - INFO - Found 1 relevant results
+2025-06-01 16:12:10,915 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:12:10,916 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmp5udpxx02.wav
+2025-06-01 16:12:10,916 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:12:11,067 - __main__ - INFO - Transcription completed successfully. Length: 25 characters
+2025-06-01 16:12:11,068 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:12:14,020 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:12:14,021 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmp693fhvv8.wav
+2025-06-01 16:12:14,021 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:12:14,169 - __main__ - INFO - Transcription completed successfully. Length: 38 characters
+2025-06-01 16:12:14,170 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:12:15,607 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:12:15,608 - __main__ - INFO - Query length: 177 characters
+2025-06-01 16:12:15,645 - __main__ - INFO - Found 0 relevant results
+2025-06-01 16:12:17,127 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:12:17,128 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmp45pgoloa.wav
+2025-06-01 16:12:17,129 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:12:17,283 - __main__ - INFO - Transcription completed successfully. Length: 43 characters
+2025-06-01 16:12:17,283 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:12:20,231 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:12:20,233 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpraxkmomi.wav
+2025-06-01 16:12:20,233 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:12:20,762 - __main__ - INFO - Transcription completed successfully. Length: 11 characters
+2025-06-01 16:12:20,763 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:12:20,763 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:12:20,763 - __main__ - INFO - Query length: 170 characters
+2025-06-01 16:12:20,795 - __main__ - INFO - Found 3 relevant results
+2025-06-01 16:12:23,335 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:12:23,336 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpgi938b_x.wav
+2025-06-01 16:12:23,336 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:12:23,467 - __main__ - INFO - Transcription completed successfully. Length: 0 characters
+2025-06-01 16:12:23,468 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:12:25,610 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:12:25,610 - __main__ - INFO - Query length: 176 characters
+2025-06-01 16:12:25,646 - __main__ - INFO - Found 0 relevant results
+2025-06-01 16:12:26,440 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:12:26,441 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpe3mdd341.wav
+2025-06-01 16:12:26,441 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:12:26,575 - __main__ - INFO - Transcription completed successfully. Length: 10 characters
+2025-06-01 16:12:26,575 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:12:29,546 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:12:29,547 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpuy1ayq3c.wav
+2025-06-01 16:12:29,547 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:12:30,029 - __main__ - INFO - Transcription completed successfully. Length: 3 characters
+2025-06-01 16:12:30,029 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:12:30,607 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:12:30,608 - __main__ - INFO - Query length: 166 characters
+2025-06-01 16:12:30,643 - __main__ - INFO - Found 0 relevant results
+2025-06-01 16:12:32,649 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:12:32,650 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpkatp0xtm.wav
+2025-06-01 16:12:32,650 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:12:32,805 - __main__ - INFO - Transcription completed successfully. Length: 29 characters
+2025-06-01 16:12:32,805 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:12:35,612 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:12:35,612 - __main__ - INFO - Query length: 154 characters
+2025-06-01 16:12:35,650 - __main__ - INFO - Found 0 relevant results
+2025-06-01 16:12:35,752 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:12:35,753 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpzhnmfue8.wav
+2025-06-01 16:12:35,753 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:12:35,896 - __main__ - INFO - Transcription completed successfully. Length: 19 characters
+2025-06-01 16:12:35,896 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:12:38,855 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:12:38,856 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmp_9q_pw2o.wav
+2025-06-01 16:12:38,856 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:12:39,040 - __main__ - INFO - Transcription completed successfully. Length: 63 characters
+2025-06-01 16:12:39,040 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:12:40,607 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:12:40,607 - __main__ - INFO - Query length: 160 characters
+2025-06-01 16:12:40,644 - __main__ - INFO - Found 1 relevant results
+2025-06-01 16:12:41,956 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:12:41,957 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpxb1h4ihg.wav
+2025-06-01 16:12:41,957 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:12:42,094 - __main__ - INFO - Transcription completed successfully. Length: 10 characters
+2025-06-01 16:12:42,095 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:12:45,061 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:12:45,064 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpj7xvknic.wav
+2025-06-01 16:12:45,064 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:12:45,813 - __main__ - INFO - Transcription completed successfully. Length: 59 characters
+2025-06-01 16:12:45,814 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:12:45,815 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:12:45,815 - __main__ - INFO - Query length: 162 characters
+2025-06-01 16:12:45,873 - __main__ - INFO - Found 3 relevant results
+2025-06-01 16:12:48,164 - __main__ - INFO - Starting transcription for audio file: audio.wav
+2025-06-01 16:12:48,165 - __main__ - INFO - Audio file saved to temporary path: /var/folders/8r/8jx7khn96b3c1wtgxsnhm9vm0000gn/T/tmpcuta6gaa.wav
+2025-06-01 16:12:48,166 - __main__ - INFO - Starting Whisper transcription...
+2025-06-01 16:12:48,790 - __main__ - INFO - Transcription completed successfully. Length: 11 characters
+2025-06-01 16:12:48,791 - __main__ - INFO - Temporary audio file cleaned up
+2025-06-01 16:12:50,608 - __main__ - INFO - Starting similarity search request
+2025-06-01 16:12:50,608 - __main__ - INFO - Query length: 156 characters
+2025-06-01 16:12:50,647 - __main__ - INFO - Found 3 relevant results
+2025-06-01 16:14:38,741 - __main__ - INFO - Loading Whisper model...
+2025-06-01 16:14:38,957 - __main__ - INFO - Whisper model loaded successfully!
+2025-06-01 16:14:38,957 - __main__ - INFO - Setting up OpenAI client...
+2025-06-01 16:14:38,972 - __main__ - INFO - OpenAI client setup complete
+2025-06-01 16:14:38,972 - __main__ - INFO - Loading sentence transformer model and medical record vectors...
+2025-06-01 16:14:38,981 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-06-01 16:14:38,981 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-01 16:14:41,580 - __main__ - INFO - Loaded 16 medical record vectors
+2025-06-01 16:14:41,590 - __main__ - INFO - Starting FastAPI server on localhost:12345
+2025-06-01 16:14:43,065 - __main__ - INFO - Serving doctor review interface
+2025-06-01 16:14:43,146 - __main__ - INFO - Fetching all summaries
+2025-06-01 16:14:43,146 - __main__ - INFO - Successfully loaded 4 summaries
+2025-06-01 16:14:43,153 - __main__ - INFO - Starting summarization request
+2025-06-01 16:14:43,153 - __main__ - INFO - Transcription length: 58 characters
+2025-06-01 16:14:43,154 - __main__ - INFO - Medical record loaded successfully
+2025-06-01 16:14:43,154 - __main__ - INFO - Sending request to OpenAI API...
+2025-06-01 16:14:48,480 - httpx - INFO - HTTP Request: POST https://gateway.ai.cloudflare.com/v1/c1e15f924beb8068d5ab8cf461f69ff8/hackathon/openai/chat/completions "HTTP/1.1 200 OK"
+2025-06-01 16:14:48,485 - __main__ - INFO - OpenAI API request completed successfully
+2025-06-01 16:14:48,485 - __main__ - INFO - Summary generated successfully. Length: 1245 characters
+2025-06-01 16:14:48,486 - __main__ - INFO - Serving nurse interface

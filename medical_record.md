@@ -1,0 +1,145 @@
+# Medical Record - Patient ID: MR-2024-0347
+
+## Patient Demographics
+- **Name:** Sarah Michelle Johnson
+- **Date of Birth:** March 15, 1978 (Age: 46)
+- **Sex:** Female
+- **Address:** 1425 Oak Street, Springfield, IL 62701
+- **Phone:** (217) 555-0123
+- **Emergency Contact:** Mark Johnson (Spouse) - (217) 555-0124
+- **Insurance:** Blue Cross Blue Shield - Policy #: BC123456789
+
+## Medical Conditions
+
+### Active Conditions
+1. **Type 2 Diabetes Mellitus** (Diagnosed: 2019)
+   - HbA1c: 7.2% (last checked: 3 months ago)
+   - Well-controlled with medication
+
+2. **Hypertension** (Diagnosed: 2020)
+   - Average BP: 135/85 mmHg
+   - Mild, managed with ACE inhibitor
+
+3. **Hypothyroidism** (Diagnosed: 2021)
+   - TSH: 4.8 mIU/L (last checked: 6 months ago)
+   - On levothyroxine replacement therapy
+
+4. **Chronic Lower Back Pain** (Ongoing since 2022)
+   - Lumbar disc degeneration L4-L5
+   - Physical therapy ongoing
+
+### Past Medical History
+- **Appendectomy** (1995)
+- **Cesarean Section** (2005, 2008)
+- **Gallbladder Removal** (2018)
+- **History of Depression** (2016-2019, resolved with therapy)
+
+## Current Medications
+1. **Metformin 1000mg** - Twice daily with meals
+2. **Lisinopril 10mg** - Once daily in morning
+3. **Levothyroxine 75mcg** - Once daily on empty stomach
+4. **Ibuprofen 400mg** - As needed for back pain (max 3x daily)
+5. **Multivitamin** - Once daily
+6. **Vitamin D3 2000 IU** - Once daily
+
+## Allergies
+- **Penicillin** - Severe rash, swelling (documented 1998)
+- **Latex** - Contact dermatitis (documented 2003)
+- **Seasonal Allergies** - Pollen, mild symptoms (runny nose, sneezing)
+
+## Social History
+- **Occupation:** Elementary School Teacher
+- **Smoking:** Never smoked
+- **Alcohol:** Occasional social drinking (2-3 glasses wine/week)
+- **Exercise:** Walks 30 minutes, 3-4 times per week
+- **Diet:** Following diabetic diet, working with nutritionist
+
+## Family History
+- **Father:** Deceased (age 72) - Heart disease, diabetes
+- **Mother:** Living (age 74) - Hypertension, arthritis
+- **Maternal Grandmother:** Deceased - Stroke
+- **Paternal Grandfather:** Deceased - Diabetes complications
+- **Siblings:** One brother (healthy), one sister (hypothyroidism)
+
+## Recent Vital Signs (Last Visit - 2 weeks ago)
+- **Height:** 5'6" (168 cm)
+- **Weight:** 165 lbs (75 kg)
+- **BMI:** 26.6
+- **Blood Pressure:** 132/84 mmHg
+- **Heart Rate:** 78 bpm
+- **Temperature:** 98.6°F (37°C)
+- **Oxygen Saturation:** 98%
+
+## Past Visit Notes
+
+### Visit #1 - January 15, 2018
+**Chief Complaint:** Routine diabetes follow-up
+**Assessment:** 
+- Diabetes well-controlled, HbA1c improved from 7.8% to 7.2%
+- Blood pressure slightly elevated, increased Lisinopril from 5mg to 10mg
+- Patient reports good compliance with diet and exercise
+**Plan:** 
+- Continue current diabetes medications
+- Return in 3 months for follow-up
+- Annual eye exam scheduled
+
+### Visit #2 - November 8, 2020
+**Chief Complaint:** Lower back pain worsening
+**Assessment:**
+- Chronic lumbar pain, likely disc degeneration
+- MRI shows mild disc bulging L4-L5
+- No neurological deficits
+**Plan:**
+- Referred to physical therapy
+- Ibuprofen for pain management
+- Avoid heavy lifting
+- Consider epidural injection if PT ineffective
+
+### Visit #3 - August 22, 2024
+**Chief Complaint:** Fatigue and weight gain
+**Assessment:**
+- TSH elevated at 6.2 mIU/L
+- Symptoms consistent with hypothyroidism
+- Started on levothyroxine 50mcg (later increased to 75mcg)
+**Plan:**
+- Recheck thyroid function in 6 weeks
+- Monitor symptoms
+- Dietary counseling for weight management
+
+### Visit #4 - May 10, 2025
+**Chief Complaint:** Annual physical exam
+**Assessment:**
+- Overall health stable
+- Diabetes management excellent
+- Blood pressure well-controlled
+- Mammogram and colonoscopy due
+**Plan:**
+- Continue current medications
+- Schedule preventive screenings
+- Flu vaccination administered
+
+## Current Scenario (Today's Visit)
+**Scheduled Appointment Type:** Follow-up for diabetes and hypertension
+**Patient's Stated Reason for Visit:** "I've been having some chest discomfort and shortness of breath when I walk up stairs. It's been happening for about a week. Also, my blood sugars have been running a bit higher than usual."
+
+## Laboratory Results (Last 3 months)
+
+### Blood Chemistry
+- **Glucose (Fasting):** 145 mg/dL (Normal: 70-100)
+- **HbA1c:** 7.2% (Goal: <7.0%)
+- **Total Cholesterol:** 195 mg/dL
+- **LDL:** 118 mg/dL
+- **HDL:** 52 mg/dL
+- **Triglycerides:** 125 mg/dL
+- **Creatinine:** 0.9 mg/dL (Normal)
+- **eGFR:** >60 mL/min (Normal)
+
+### Thyroid Function
+- **TSH:** 2.8 mIU/L (Normal: 0.4-4.0)
+- **Free T4:** 1.2 ng/dL (Normal)
+
+### Complete Blood Count
+- **Hemoglobin:** 13.2 g/dL (Normal)
+- **Hematocrit:** 39.8% (Normal)
+- **White Blood Count:** 6,800 cells/μL (Normal)
+- **Platelets:** 285,000 cells/μL (Normal) 
