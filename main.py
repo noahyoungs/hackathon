@@ -39,6 +39,7 @@ templates = Jinja2Templates(directory="templates")
 # Global variables for medical data
 medical_summaries = []
 current_session = None
+current_ai_summary = None  # Track current AI summary
 
 # Load Whisper model (using smaller model for faster processing)
 logger.info("Loading Whisper model...")
@@ -336,6 +337,85 @@ async def similarity_search(request: dict):
         return {
             "success": False,
             "error": str(e)
+        }
+
+@app.get("/get-ai-summary")
+async def get_ai_summary():
+    """Get the current AI summary for display in doctor review"""
+    try:
+        logger.info("Getting current AI summary")
+        
+        if current_ai_summary is None:
+            logger.info("No AI summary available")
+            return {
+                "success": False,
+                "error": "No AI summary available",
+                "summary": None
+            }
+        
+        logger.info("AI summary retrieved successfully")
+        return {
+            "success": True,
+            "summary": current_ai_summary,
+            "timestamp": datetime.now().isoformat()
+        }
+        
+    except Exception as e:
+        logger.error(f"Failed to get AI summary: {str(e)}", exc_info=True)
+        return {
+            "success": False,
+            "error": str(e)
+        }
+
+@app.post("/set-ai-summary")
+async def set_ai_summary(request: dict):
+    """Set the AI summary from external source"""
+    global current_ai_summary
+    try:
+        logger.info("Setting AI summary from external source")
+        
+        summary = request.get("summary", "")
+        if not summary.strip():
+            logger.warning("No summary provided in set AI summary request")
+            return {
+                "success": False,
+                "error": "No summary provided"
+            }
+        
+        current_ai_summary = summary
+        logger.info(f"AI summary set successfully. Length: {len(summary)} characters")
+        
+        return {
+            "success": True,
+            "message": "AI summary set successfully"
+        }
+        
+    except Exception as e:
+        logger.error(f"Failed to set AI summary: {str(e)}", exc_info=True)
+        return {
+            "success": False,
+            "error": str(e)
+        }
+
+@app.get("/check-summary-available")
+async def check_summary_available():
+    """Check if AI summary is available for conditional button rendering"""
+    try:
+        logger.info("Checking if AI summary is available")
+        
+        available = current_ai_summary is not None and current_ai_summary.strip() != ""
+        
+        return {
+            "success": True,
+            "available": available
+        }
+        
+    except Exception as e:
+        logger.error(f"Failed to check summary availability: {str(e)}", exc_info=True)
+        return {
+            "success": False,
+            "error": str(e),
+            "available": False
         }
 
 if __name__ == "__main__":

@@ -373,73 +373,41 @@
         
         async function loadLatestSummary() {
             try {
-                // First get the latest saved interaction to get the transcription
-                const response = await fetch('/summaries');
+                // Check if AI summary is available from the new endpoint
+                const response = await fetch('/get-ai-summary');
                 const result = await response.json();
                 
-                if (result.success && result.summaries.length > 0) {
-                    // Get the most recent summary
-                    const latestSummary = result.summaries[result.summaries.length - 1];
-                    currentSummary = latestSummary;
-                    
-                    // Show timestamp
+                if (result.success && result.summary) {
+                    // Display the AI summary
                     const container = document.getElementById('summaryContainer');
                     const timestampDiv = document.createElement('div');
                     timestampDiv.className = 'timestamp';
-                    timestampDiv.innerHTML = `📅 Nurse Interaction Completed: ${new Date(latestSummary.timestamp).toLocaleString()}`;
+                    timestampDiv.innerHTML = `📅 Nurse Interaction Completed: ${new Date(result.timestamp).toLocaleString()}`;
                     container.innerHTML = '';
                     container.appendChild(timestampDiv);
                     
-                    // Now generate fresh summary from the transcription
-                    await generateFreshSummary(latestSummary.transcription);
+                    // Show the AI summary
+                    const summaryDiv = document.createElement('div');
+                    summaryDiv.className = 'nurse-summary';
+                    summaryDiv.innerHTML = `
+                        <h4>🩺 Nurse Interaction Summary</h4>
+                        <div class="summary-content">${marked.parse(result.summary)}</div>
+                    `;
+                    container.appendChild(summaryDiv);
                 } else {
-                    displayError('No nurse interaction found. Please complete a nurse interaction first.');
+                    displayError('No AI summary available. Please complete a nurse interaction with summary first.');
                 }
                 
             } catch (error) {
-                console.error('Error loading summary:', error);
-                displayError('Error loading nurse interaction. Please try again.');
+                console.error('Error loading AI summary:', error);
+                displayError('Error loading AI summary. Please try again.');
             }
         }
         
         async function generateFreshSummary(transcription) {
-            try {
-                const container = document.getElementById('summaryContainer');
-                
-                // Show loading state
-                const loadingDiv = document.createElement('div');
-                loadingDiv.className = 'nurse-summary';
-                loadingDiv.innerHTML = `
-                    <h4>🩺 Nurse Interaction Summary</h4>
-                    <div class="loading">Generating AI summary...</div>
-                `;
-                container.appendChild(loadingDiv);
-                
-                // Call summarize endpoint
-                const response = await fetch('/summarize', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ transcription: transcription })
-                });
-                
-                const result = await response.json();
-                
-                if (result.success) {
-                    // Display the fresh summary
-                    loadingDiv.innerHTML = `
-                        <h4>🩺 Nurse Interaction Summary</h4>
-                        <div class="summary-content">${marked.parse(result.summary)}</div>
-                    `;
-                } else {
-                    throw new Error(result.error || 'Summary generation failed');
-                }
-                
-            } catch (error) {
-                console.error('Error generating fresh summary:', error);
-                displayError('Error generating summary. Please try again.');
-            }
+            // This function is no longer needed since we're using the new API endpoint
+            // Keeping it for compatibility but it won't be called
+            console.log('generateFreshSummary called but not needed with new API');
         }
         
         async function startLiveInsights() {

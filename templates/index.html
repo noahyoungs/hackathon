@@ -60,6 +60,28 @@
             margin-bottom: 1rem;
         }
         
+        .iframe-section {
+            text-align: center;
+            margin: 2rem 0;
+            background: #f8f9ff;
+            border-radius: 10px;
+            padding: 1.5rem;
+            border: 2px solid #667eea;
+        }
+        
+        .iframe-section h4 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        
+        .iframe-container {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
         .microphone-section {
             text-align: center;
             margin: 2rem 0;
@@ -233,279 +255,48 @@
             <p><strong>Chief Complaint:</strong> Chest discomfort and shortness of breath when walking up stairs</p>
         </div>
         
-        <div class="microphone-section">
-            <button id="micButton" class="mic-button" onclick="toggleRecording()">
-                🎤
-            </button>
-            <div id="status" class="status idle">Click microphone to start recording</div>
-        </div>
-        
-        <div class="transcription">
-            <h4>📝 Live Transcription</h4>
-            <div id="transcriptionText" class="transcription-text">
-                Transcription will appear here as you speak...
-            </div>
-        </div>
-        
-        <div id="summarySection" class="summary" style="display: none;">
-            <h4>🔍 AI Summary</h4>
-            <div id="summaryContent" class="summary-content">
-                AI-generated summary will appear here...
-            </div>
+        <div class="iframe-section">
+            <h4>🎤 Nurse-Patient Interaction</h4>
+            <iframe src="http://localhost:3000" allow="microphone; camera" class="iframe-container"></iframe>
         </div>
         
         <div class="controls">
-            <button class="btn btn-primary" onclick="continueToDoctor()" id="continueButton">Continue to doctor session</button>
+            <button class="btn btn-primary" onclick="continueToDoctor()" id="continueButton" style="display: none;">Continue to doctor session</button>
         </div>
     </div>
 
     <script>
-        let isRecording = false;
-        let mediaRecorder;
-        let audioChunks = [];
-        let fullTranscription = "";
-        
-        const micButton = document.getElementById('micButton');
-        const status = document.getElementById('status');
-        const transcriptionText = document.getElementById('transcriptionText');
-        const summarySection = document.getElementById('summarySection');
-        const summaryContent = document.getElementById('summaryContent');
-        
-        async function toggleRecording() {
-            if (!isRecording) {
-                startRecording();
-            } else {
-                stopRecording();
-            }
-        }
-        
-        async function startRecording() {
+        // Check if summary is available and show/hide continue button
+        async function checkSummaryAvailability() {
             try {
-                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-                mediaRecorder = new MediaRecorder(stream);
-                audioChunks = [];
-                
-                mediaRecorder.ondataavailable = event => {
-                    audioChunks.push(event.data);
-                };
-                
-                mediaRecorder.onstop = async () => {
-                    const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
-                    await transcribeAudio(audioBlob);
-                };
-                
-                mediaRecorder.start();
-                isRecording = true;
-                
-                micButton.classList.add('recording');
-                micButton.textContent = '🔴';
-                status.className = 'status recording';
-                status.textContent = 'Recording... Click to stop';
-                
-            } catch (error) {
-                console.error('Error starting recording:', error);
-                status.className = 'status idle';
-                status.textContent = 'Error: Could not access microphone. Try using localhost or HTTPS.';
-            }
-        }
-        
-        function stopRecording() {
-            if (mediaRecorder && mediaRecorder.state === 'recording') {
-                mediaRecorder.stop();
-                mediaRecorder.stream.getTracks().forEach(track => track.stop());
-            }
-            
-            isRecording = false;
-            micButton.classList.remove('recording');
-            micButton.textContent = '🎤';
-            status.className = 'status processing';
-            status.textContent = 'Processing audio...';
-        }
-        
-        async function transcribeAudio(audioBlob) {
-            try {
-                const formData = new FormData();
-                formData.append('audio', audioBlob, 'recording.wav');
-                
-                const response = await fetch('/transcribe', {
-                    method: 'POST',
-                    body: formData
-                });
-                
+                const response = await fetch('/check-summary-available');
                 const result = await response.json();
                 
-                if (result.success) {
-                    const newText = result.transcription;
-                    fullTranscription += (fullTranscription ? ' ' : '') + newText;
-                    transcriptionText.textContent = fullTranscription;
-                    
-                    status.className = 'status idle';
-                    status.textContent = 'Click microphone to continue recording';
+                if (result.success && result.available) {
+                    document.getElementById('continueButton').style.display = 'inline-block';
                 } else {
-                    throw new Error(result.error || 'Transcription failed');
+                    document.getElementById('continueButton').style.display = 'none';
                 }
-                
             } catch (error) {
-                console.error('Error transcribing audio:', error);
-                status.className = 'status idle';
-                status.textContent = 'Error processing audio. Try again.';
+                console.error('Error checking summary availability:', error);
+                document.getElementById('continueButton').style.display = 'none';
             }
         }
         
-        async function generateSummary() {
-            if (!fullTranscription.trim()) {
-                alert('No transcription available to summarize');
-                return;
-            }
-            
-            try {
-                status.className = 'status processing';
-                status.textContent = 'Generating AI summary...';
-                
-                const response = await fetch('/summarize', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ transcription: fullTranscription })
-                });
-                
-                const result = await response.json();
-                
-                if (result.success) {
-                    // Use marked.js to render markdown content
-                    const markdownHtml = marked.parse(result.summary);
-                    summaryContent.innerHTML = markdownHtml;
-                    summarySection.style.display = 'block';
-                    
-                    status.className = 'status idle';
-                    status.textContent = 'Summary generated successfully';
-                } else {
-                    throw new Error(result.error || 'Summary generation failed');
-                }
-                
-            } catch (error) {
-                console.error('Error generating summary:', error);
-                status.className = 'status idle';
-                status.textContent = 'Error generating summary. Try again.';
-            }
-        }
-        
-        async function saveSummary() {
-            if (!summaryContent.innerHTML || summaryContent.innerHTML === 'AI-generated summary will appear here...') {
-                alert('No summary available to save');
-                return;
-            }
-            
-            try {
-                const response = await fetch('/save-summary', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ 
-                        transcription: fullTranscription,
-                        summary: summaryContent.textContent || summaryContent.innerText,
-                        timestamp: new Date().toISOString()
-                    })
-                });
-                
-                const result = await response.json();
-                
-                if (result.success) {
-                    status.className = 'status idle';
-                    status.textContent = 'Summary saved to medical record. Redirecting to doctor review...';
-                    
-                    // Show success message briefly then redirect
-                    setTimeout(() => {
-                        window.location.href = result.redirect_url || '/doctor-review';
-                    }, 2000);
-                } else {
-                    throw new Error(result.error || 'Save failed');
-                }
-                
-            } catch (error) {
-                console.error('Error saving summary:', error);
-                status.className = 'status idle';
-                status.textContent = 'Error saving summary. Try again.';
-            }
-        }
-        
-        function clearSession() {
-            fullTranscription = "";
-            transcriptionText.textContent = "Transcription will appear here as you speak...";
-            summarySection.style.display = 'none';
-            summaryContent.innerHTML = "AI-generated summary will appear here...";
-            status.className = 'status idle';
-            status.textContent = 'Session cleared. Click microphone to start recording';
-        }
+        // Check summary availability on page load and periodically
+        window.onload = function() {
+            checkSummaryAvailability();
+            // Check every 5 seconds
+            setInterval(checkSummaryAvailability, 5000);
+        };
         
         async function continueToDoctor() {
-            if (!fullTranscription.trim()) {
-                alert('No transcription available to continue to doctor session');
-                return;
-            }
-            
             try {
-                // First generate summary if not already generated
-                if (!summaryContent.innerHTML || summaryContent.innerHTML === 'AI-generated summary will appear here...') {
-                    status.className = 'status processing';
-                    status.textContent = 'Generating AI summary...';
-                    
-                    const summaryResponse = await fetch('/summarize', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({ transcription: fullTranscription })
-                    });
-                    
-                    const summaryResult = await summaryResponse.json();
-                    
-                    if (summaryResult.success) {
-                        // Use marked.js to render markdown content
-                        const markdownHtml = marked.parse(summaryResult.summary);
-                        summaryContent.innerHTML = markdownHtml;
-                        summarySection.style.display = 'block';
-                    } else {
-                        throw new Error(summaryResult.error || 'Summary generation failed');
-                    }
-                }
-                
-                // Now save the summary
-                status.className = 'status processing';
-                status.textContent = 'Saving summary and redirecting to doctor session...';
-                
-                const saveResponse = await fetch('/save-summary', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ 
-                        transcription: fullTranscription,
-                        summary: summaryContent.textContent || summaryContent.innerText,
-                        timestamp: new Date().toISOString()
-                    })
-                });
-                
-                const saveResult = await saveResponse.json();
-                
-                if (saveResult.success) {
-                    status.className = 'status idle';
-                    status.textContent = 'Summary saved successfully. Redirecting to doctor session...';
-                    
-                    // Redirect after brief delay
-                    setTimeout(() => {
-                        window.location.href = saveResult.redirect_url || '/doctor-review';
-                    }, 1500);
-                } else {
-                    throw new Error(saveResult.error || 'Save failed');
-                }
-                
+                // Redirect to doctor review page
+                window.location.href = '/doctor-review';
             } catch (error) {
                 console.error('Error continuing to doctor session:', error);
-                status.className = 'status idle';
-                status.textContent = 'Error continuing to doctor session. Try again.';
+                alert('Error continuing to doctor session. Please try again.');
             }
         }
     </script>

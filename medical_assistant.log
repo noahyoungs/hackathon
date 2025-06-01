@@ -825,3 +825,181 @@
 2025-06-01 16:14:48,485 - __main__ - INFO - OpenAI API request completed successfully
 2025-06-01 16:14:48,485 - __main__ - INFO - Summary generated successfully. Length: 1245 characters
 2025-06-01 16:14:48,486 - __main__ - INFO - Serving nurse interface
+2025-06-01 16:46:37,797 - __main__ - INFO - Loading Whisper model...
+2025-06-01 16:46:38,023 - __main__ - INFO - Whisper model loaded successfully!
+2025-06-01 16:46:38,023 - __main__ - INFO - Setting up OpenAI client...
+2025-06-01 16:46:38,039 - __main__ - INFO - OpenAI client setup complete
+2025-06-01 16:46:38,039 - __main__ - INFO - Loading sentence transformer model and medical record vectors...
+2025-06-01 16:46:38,050 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-06-01 16:46:38,050 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-01 16:46:40,806 - __main__ - INFO - Loaded 16 medical record vectors
+2025-06-01 16:46:40,816 - __main__ - INFO - Starting FastAPI server on localhost:12345
+2025-06-01 16:46:53,936 - __main__ - INFO - Serving nurse interface
+2025-06-01 16:46:54,240 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:46:59,241 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:47:04,243 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:47:09,241 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:47:14,242 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:47:19,241 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:47:24,241 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:47:29,242 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:47:34,242 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:47:39,241 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:47:44,242 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:47:49,241 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:47:54,243 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:47:59,242 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:48:04,242 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:48:09,242 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:48:14,241 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:48:19,241 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:48:24,241 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:48:29,241 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:48:29,469 - __main__ - INFO - Setting AI summary from external source
+2025-06-01 16:48:29,470 - __main__ - INFO - AI summary set successfully. Length: 203 characters
+2025-06-01 16:48:34,250 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:48:39,243 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:48:40,980 - __main__ - INFO - Serving nurse interface
+2025-06-01 16:48:41,149 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:48:43,040 - __main__ - INFO - Serving doctor review interface
+2025-06-01 16:48:43,077 - __main__ - INFO - Getting current AI summary
+2025-06-01 16:48:43,078 - __main__ - INFO - AI summary retrieved successfully
+2025-06-01 16:48:51,280 - __main__ - INFO - Serving nurse interface
+2025-06-01 16:48:51,449 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:48:56,452 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:49:01,451 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:49:06,451 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:49:11,452 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:49:16,451 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:49:21,450 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:49:26,453 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:49:31,454 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:49:36,452 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:49:41,453 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:49:46,452 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:49:51,453 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:49:56,451 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:50:01,452 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:50:04,052 - __main__ - INFO - Serving nurse interface
+2025-06-01 16:50:04,226 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:50:09,229 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:50:14,228 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:50:14,563 - __main__ - INFO - Serving nurse interface
+2025-06-01 16:50:14,721 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:50:19,724 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:50:24,724 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:50:39,330 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:50:39,723 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:50:44,725 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:50:49,724 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:50:54,724 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:50:56,175 - __main__ - INFO - Serving nurse interface
+2025-06-01 16:50:57,385 - __main__ - INFO - Serving nurse interface
+2025-06-01 16:50:58,197 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:50:59,723 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:51:04,725 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:51:09,627 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:51:09,724 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:51:14,626 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:51:14,724 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:51:19,626 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:51:19,726 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:51:24,626 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:51:24,725 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:51:29,626 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:51:29,725 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:51:34,626 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:51:34,724 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:51:39,627 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:51:39,724 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:51:44,627 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:51:44,725 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:51:49,628 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:51:49,724 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:51:54,628 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:51:54,725 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:51:59,628 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:51:59,723 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:52:04,629 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:52:04,725 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:52:09,629 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:52:09,725 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:52:14,630 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:52:14,725 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:52:19,631 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:52:19,723 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:52:24,631 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:52:24,725 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:52:29,632 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:52:29,723 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:52:34,633 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:52:34,724 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:52:39,633 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:52:39,725 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:52:44,633 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:52:44,724 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:52:49,634 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:52:49,723 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:52:54,724 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:52:55,626 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:52:59,725 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:53:01,625 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:53:04,724 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:53:06,624 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:53:09,723 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:53:11,625 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:53:14,723 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:53:16,412 - __main__ - INFO - Serving nurse interface
+2025-06-01 16:53:17,553 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:53:19,725 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:53:20,539 - __main__ - INFO - Serving nurse interface
+2025-06-01 16:53:20,568 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:53:24,724 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:53:25,569 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:53:27,259 - __main__ - INFO - Serving nurse interface
+2025-06-01 16:53:28,292 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:53:29,606 - __main__ - INFO - Serving nurse interface
+2025-06-01 16:53:29,713 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:53:33,296 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:53:38,295 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:53:38,412 - __main__ - INFO - Serving nurse interface
+2025-06-01 16:53:38,433 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:53:43,437 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:53:48,434 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:53:53,438 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:53:58,437 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:54:03,437 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:54:08,436 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:54:13,443 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:54:18,439 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:54:19,557 - __main__ - INFO - Serving nurse interface
+2025-06-01 16:54:19,587 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:54:24,592 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:54:29,588 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:54:34,592 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:54:39,591 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:54:44,592 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:54:49,596 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:54:54,594 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:54:59,594 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:55:03,014 - __main__ - INFO - Serving nurse interface
+2025-06-01 16:55:04,454 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:55:09,454 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:55:14,458 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:55:19,455 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:55:21,409 - __main__ - INFO - Serving nurse interface
+2025-06-01 16:55:21,757 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:55:26,757 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:55:31,758 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:55:36,760 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:55:41,761 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:55:46,761 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:55:51,764 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:55:56,763 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:56:01,764 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:56:03,376 - __main__ - INFO - Setting AI summary from external source
+2025-06-01 16:56:03,376 - __main__ - INFO - AI summary set successfully. Length: 294 characters
+2025-06-01 16:56:06,763 - __main__ - INFO - Checking if AI summary is available
+2025-06-01 16:56:10,382 - __main__ - INFO - Serving doctor review interface
+2025-06-01 16:56:10,402 - __main__ - INFO - Getting current AI summary
+2025-06-01 16:56:10,402 - __main__ - INFO - AI summary retrieved successfully
